@@ -1,0 +1,89 @@
+/* Center the title and input box */
+h1, .input-area {
+    text-align: center; /* Center align the title and input area */
+  }
+  
+  /* Style the input area */
+  .input-area {
+    display: flex;
+    justify-content: center; /* Center the input box horizontally */
+    margin-bottom: 20px; /* Add some space below the input area */
+  }
+
+  /* Style the "Add" button */
+.addBtn {
+    background-color: #4CAF50; /* Green background */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 4px #999;
+}
+
+.addBtn:active {
+    background-color: #3e8e41;
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+  
+  /* Add a "checked" mark when clicking on a list item */
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex; /* Added to center the list */
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items horizontally */
+  }
+  
+  /* Style the close button */
+  .close {
+      margin-left: 15px;
+      color: #ff0000;
+      font-weight: bold;
+      float: right;
+      font-size: 22px;
+      line-height: 20px;
+      cursor: pointer;
+  }
+  
+  .close:hover {
+      color: #000;
+  }
+  
+  /* Style the checked items */
+  .checked {
+      text-decoration: line-through;
+      position: relative; /* Added to position the sparkles */
+  }
+  
+  /* Green sparkles effect */
+  @keyframes green-sparkle {
+      from {
+          opacity: 1;
+          transform: scale(2) translate(-50%, -50%); /* Start even bigger */
+      }
+      to {
+          opacity: 0;
+          transform: scale(4) translate(-50%, -50%); /* End much bigger */
+      }
+  }
+  
+  .checked::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 50px; /* Much larger width */
+      height: 50px; /* Much larger height */
+      background-color: #00ff00; /* Green color */
+      border-radius: 50%;
+      animation: green-sparkle 1.5s ease-out forwards; /* Longer duration */
+  }
+  
