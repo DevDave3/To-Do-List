@@ -1,0 +1,1 @@
+This repository contains a simple to-do list application where you can add tasks using the **green add button** or by pressing the **Enter** key. Once you complete and cross off a task, enjoy a satisfying **green sparkle** to celebrate your accomplishment!
